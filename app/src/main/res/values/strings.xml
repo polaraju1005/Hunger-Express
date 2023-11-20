@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Hunger Express</string>
+
+    <string-array name="statuses">
+        <item>All</item>
+        <item>Placed</item>
+        <item>In Progress</item>
+        <item>Completed</item>
+        <item>Canceled</item>
+    </string-array>
+
+    <string-array name="addresses">
+        <item>None</item>
+    </string-array>
+
+    <string-array name="payMethods">
+        <item>Cash On Delivery</item>
+        <item>PayPal</item>
+    </string-array>
+</resources>

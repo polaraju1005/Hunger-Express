@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/viewDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:background="#EC4E4F" />
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="Navigation Drawer"
+            android:src="@drawable/baseline_menu_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Hunger Express"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="Notifications"
+            android:src="@drawable/baseline_shopping_cart_24" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewDashboard"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    app:autoPlay="true"
+                    app:autoWidthFixing="true"
+                    app:carouselBackground="@android:color/transparent"
+                    app:carouselType="BLOCK"
+                    app:imagePlaceholder="@color/black"
+                    app:scaleOnScroll="true"
+                    app:scalingFactor="0.2"
+                    app:showBottomShadow="false"
+                    app:showCaption="false"
+                    app:showIndicator="true"
+                    app:showNavigationButtons="false"
+                    app:showTopShadow="false" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/constraintLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="35dp"
+            android:visibility="gone"
+            app:dotsColor="#2f2e41"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="8dp"
+            app:dotsSpacing="4dp"
+            app:dotsStrokeColor="#2f2e41"
+            app:dotsWidthFactor="2.5"
+            app:progressMode="true"
+            app:selectedDotColor="#2f2e41" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dots_indicator"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_medium"
+            android:text="---------Restraunts---------"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/dots_indicator"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeRes1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/dots_indicator">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRes1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/imgRes1"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:contentDescription="Restraunt Café L'Artiste"
+                            android:padding="5dp"
+                            android:src="@drawable/res1" />
+
+                        <TextView
+                            android:id="@+id/txtRes1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgRes1"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="Café L'Artiste"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtRes1Desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes1"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="A quaint French bistro in an art district with a vintage European charm, colorful awnings, and paintings displayed outside."
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txtRes1Add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes1Desc"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📍Charlotte North Carlonina 28227"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes1Add"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📞 89898989898"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeRes2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRes2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/imgRes2"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_margin="5dp"
+                            android:contentDescription="Restraunt Desert Mirage"
+                            android:padding="5dp"
+                            android:src="@drawable/res2" />
+
+                        <TextView
+                            android:id="@+id/txtRes2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgRes2"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="Desert Mirage"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtRes2Desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes2"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="A Middle Eastern restaurant set in a luxurious tented setting in the desert, with guests enjoying traditional dishes in a warm ambiance."
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txtRes2Add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes2Desc"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📍67 Oasis Street, Sandville"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes2Add"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📞998899889"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeRes3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRes3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/imgRes3"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_margin="5dp"
+                            android:contentDescription="Restraunt Plates &amp; Palates Paradise"
+                            android:padding="5dp"
+                            android:src="@drawable/res3" />
+
+                        <TextView
+                            android:id="@+id/txtRes3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgRes3"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="Plates &amp; Palates Paradise"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtRes3Desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes3"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="Dining establishment that transcends the boundaries of traditional culinary experiences."
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txtRes3Add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes3Desc"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📍751 Chesapeake Ln #101,Clarsville, Tennessee, 37040"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes3Add"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📞(931) 648-0202"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeRes4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRes4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/imgRes4"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_margin="5dp"
+                            android:contentDescription="Restraunt THE MOONLIT OLIVE"
+                            android:padding="5dp"
+                            android:src="@drawable/res4" />
+
+                        <TextView
+                            android:id="@+id/txtRes4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgRes4"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="THE MOONLIT OLIVE"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtRes4Desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes4"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="A unique dining establishment that weaves an enchanting and memorable experience for its patrons. The ambiance is designed to transport guests to a tranquil Mediterranean-inspired setting where the moon's gentle glow casts an enchanting spell over the dining space."
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txtRes4Add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes4Desc"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📍2845 W 42nd Ave, Anchorage, Alabama, 99517."
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes4Add"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📞 (907 248-5036)"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeRes5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRes5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/imgRes5"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_margin="5dp"
+                            android:contentDescription="Restraunt NAMI WAVES"
+                            android:padding="5dp"
+                            android:src="@drawable/res5" />
+
+                        <TextView
+                            android:id="@+id/txtRes5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgRes5"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="NAMI WAVES"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtRes5Desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes5"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="An exceptional dining destination that combines a breathtaking oceanic ambiance with a menu that celebrates the diverse and enticing flavors of Asian culinary traditions."
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txtRes5Add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes5Desc"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📍132 Main street Annex, New Heaven, Connecticut
+"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtRes5Add"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:text="📞(203) 468-0964"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

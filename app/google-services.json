@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "900918379664",
+    "project_id": "hunger-express-ddbfb",
+    "storage_bucket": "hunger-express-ddbfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900918379664:android:5fda0c842268191c344415",
+        "android_client_info": {
+          "package_name": "com.example.hungerexpress"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmhRwTf1Ab35lT25H1QuIDln4yVVlTy7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgSignUpScreen"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:contentDescription="loginPage"
+                android:src="@drawable/login" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAdmData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgSignUpScreen"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="30dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txtSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:padding="5dp"
+                        android:text="Signup"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtSignUp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="First Name"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="text"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutLastName"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayout"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Last Name"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="text"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutEmail"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayoutLastName"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Email"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="textEmailAddress"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutPassword"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayoutEmail"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Password"
+                        app:endIconMode="password_toggle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="textPassword"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutConfirmPassword"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayoutPassword"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Confirm Password"
+                        app:endIconMode="password_toggle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="textPassword"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/txtAddAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayoutConfirmPassword"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Add Address (Optional)" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutAdd1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtAddAddress"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Address Line 1"
+                        android:visibility="gone"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputAddLine1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="text"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutAdd2"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayoutAdd1"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Address Line 2"
+                        android:visibility="gone"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputAddLine2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="text"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutCity"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayoutAdd2"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="City"
+                        android:visibility="gone"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="text"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutState"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayoutCity"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="State"
+                        android:visibility="gone"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="text"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutZipCode"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textInputLayoutState"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Zip Code"
+                        android:visibility="gone"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputZipCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="text"
+                            android:padding="16dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="310dp"
+                        android:layout_height="45dp"
+                        android:layout_below="@+id/textInputLayoutZipCode"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:elevation="5dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#1976D2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="SIGNUP"
+                                android:textColor="@color/white"
+                                android:textSize="16.5sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/txtGotoLoginPage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btnSignUp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Back to Login"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

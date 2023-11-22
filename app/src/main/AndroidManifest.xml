@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HungerExpress"
         tools:targetApi="31">
         <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckOutActivity"
             android:exported="false" />
         <activity

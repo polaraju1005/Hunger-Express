@@ -21,7 +21,7 @@ import java.util.Timer
 
 class UserDashboardActivity : AppCompatActivity() {
     private lateinit var menu: ImageView
-    private lateinit var cart:ImageView
+    private lateinit var cart: ImageView
     private lateinit var relativeRes1: RelativeLayout
     private lateinit var relativeRes2: RelativeLayout
     private lateinit var relativeRes3: RelativeLayout
@@ -105,7 +105,7 @@ class UserDashboardActivity : AppCompatActivity() {
         }
 
         cartDialog.findViewById<TextView>(R.id.txtCheckOut).setOnClickListener {
-            startActivity(Intent(this@UserDashboardActivity,CheckOutActivity::class.java))
+            startActivity(Intent(this@UserDashboardActivity, CheckOutActivity::class.java))
         }
 
         cartDialog.show()
@@ -117,6 +117,26 @@ class UserDashboardActivity : AppCompatActivity() {
         menuDialog.setCancelable(false)
         menuDialog.setCanceledOnTouchOutside(true)
         menuDialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
+
+//        val tv =
+//            menuDialog.findViewById<TextView>(R.id.txtCount)
+//
+//        val curr:String = tv.text.toString()
+//
+//        var total:Int = curr.toInt()
+//
+//        menuDialog.findViewById<CardView>(R.id.btnMinus).setOnClickListener {
+//            while (total > 0) {
+//                total -= 1;
+//            }
+//
+//        }
+//
+//        menuDialog.findViewById<CardView>(R.id.btnPlus).setOnClickListener {
+//                total+=1;
+//        }
+//
+//        tv.text = total.toString()
 
         menuDialog.show()
     }

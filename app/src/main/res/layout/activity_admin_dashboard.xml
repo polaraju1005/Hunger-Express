@@ -99,6 +99,7 @@
         app:selectedDotColor="#2f2e41" />
 
     <TextView
+        android:id="@+id/txtRestrauntsAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/dots_indicator"
@@ -106,5 +107,23 @@
         android:fontFamily="@font/poppins_medium"
         android:text="---------Restraunts---------"
         android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtRestrauntsAdmin"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bus_list_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            tools:listitem="@layout/restraunts_recycler_view" />
+
+    </LinearLayout>
 
 </RelativeLayout>

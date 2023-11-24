@@ -1,8 +1,10 @@
 package com.example.hungerexpress
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import com.google.firebase.ktx.Firebase
@@ -15,6 +17,8 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 import java.util.Timer
 
 class AdminDashboardActivity : AppCompatActivity() {
+
+    private lateinit var buttonMenu:ImageView
 
     lateinit var swipeTimer: Timer
     lateinit var postersViewPager2: ViewPager2
@@ -30,6 +34,8 @@ class AdminDashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_dashboard)
 
+        buttonMenu = findViewById(R.id.imgMenu)
+
         postersDataList = ArrayList<PostersData>()
         swipeTimer = Timer()
 
@@ -39,6 +45,12 @@ class AdminDashboardActivity : AppCompatActivity() {
         dotsIndicator = findViewById<WormDotsIndicator>(R.id.dots_indicator)
         carousel = findViewById(R.id.carousel)
         carousel.registerLifecycle(lifecycle)
+
+        buttonMenu.setOnClickListener {
+            val intent = Intent(this@AdminDashboardActivity,AdminNavigationActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left)
+        }
 
     }
 

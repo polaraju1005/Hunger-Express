@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRes1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imgRes1"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="Restraunt Café L'Artiste"
+                android:padding="5dp"
+                android:src="@drawable/res1" />
+
+            <TextView
+                android:id="@+id/txtRes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgRes1"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="5dp"
+                android:text="Café L'Artiste"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtRes1Desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRes1"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="5dp"
+                android:text="A quaint French bistro in an art district with a vintage European charm, colorful awnings, and paintings displayed outside."
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtRes1Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRes1Desc"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="5dp"
+                android:text="📍Charlotte North Carlonina 28227"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRes1Add"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="5dp"
+                android:text="📞 89898989898"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

@@ -85,6 +85,14 @@ class AdminNavigationActivity : AppCompatActivity() {
             showDeleteRestaurantDialog()
         }
 
+        changePass.setOnClickListener {
+            showChangePasswordDialog()
+        }
+
+        allOrders.setOnClickListener {
+            startActivity(Intent(this@AdminNavigationActivity, MyOrdersActivity::class.java))
+        }
+
         deliveryDriver.setOnClickListener {
             addDriver.isVisible = true
             editDriver.isVisible = true
@@ -161,5 +169,28 @@ class AdminNavigationActivity : AppCompatActivity() {
         }
 
         addResDialog.show()
+    }
+
+    private fun showChangePasswordDialog() {
+        val passDialog = Dialog(this)
+        passDialog.setContentView(R.layout.change_password_dialog)
+        passDialog.setCancelable(false)
+        passDialog.setCanceledOnTouchOutside(true)
+        passDialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
+
+        passDialog.findViewById<TextView>(R.id.txtCancel).setOnClickListener {
+            passDialog.dismiss()
+        }
+
+        passDialog.findViewById<TextView>(R.id.txtChangePass).setOnClickListener {
+            Toast.makeText(
+                this@AdminNavigationActivity,
+                "Password Changed Successfully",
+                Toast.LENGTH_SHORT
+            ).show()
+            passDialog.dismiss()
+        }
+
+        passDialog.show()
     }
 }

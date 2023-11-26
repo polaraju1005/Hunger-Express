@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 
 
@@ -52,6 +53,19 @@ class UserNavigationActivity : AppCompatActivity() {
         passDialog.setCancelable(false)
         passDialog.setCanceledOnTouchOutside(true)
         passDialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
+
+        passDialog.findViewById<TextView>(R.id.txtCancel).setOnClickListener {
+            passDialog.dismiss()
+        }
+
+        passDialog.findViewById<TextView>(R.id.txtChangePass).setOnClickListener {
+            Toast.makeText(
+                this@UserNavigationActivity,
+                "Password Changed Successfully",
+                Toast.LENGTH_SHORT
+            ).show()
+            passDialog.dismiss()
+        }
 
         passDialog.show()
     }

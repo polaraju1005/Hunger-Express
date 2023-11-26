@@ -21,9 +21,7 @@ class MyOrdersActivity : AppCompatActivity() {
         back = findViewById(R.id.backButtonIcon)
 
         back.setOnClickListener {
-           val intent = Intent(this@MyOrdersActivity,UserNavigationActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
-            startActivity(intent)
+            onSupportNavigateUp()
         }
 
         val orderStatuses = resources.getStringArray(R.array.statuses)
@@ -33,5 +31,10 @@ class MyOrdersActivity : AppCompatActivity() {
         val autocompleteTV = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView2)
 
         autocompleteTV.setAdapter(arrayAdapter)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
